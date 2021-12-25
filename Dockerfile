@@ -3,7 +3,7 @@ FROM ghcr.io/viswanathbalusu/megarestbase AS builder
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
 
-COPY requirements.txt .
+COPY requirements.txt
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 COPY extract /usr/local/bin
